@@ -1,0 +1,11 @@
+/* MEDIA QUERIES */
+@media screen and (max-width: 950px) {
+  .logo-img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .responsive-img {
+    width: 100%;
+  }
+}
