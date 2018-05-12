@@ -54,7 +54,7 @@ h2, h3, h4, h5, p {
   padding-bottom: 5px;
 }
 
-div.col-md-6 {
+.col-sm-6 {
     width: 25%;
 }
 
@@ -70,7 +70,6 @@ h5.header-caption {
 
 div.row {
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .header-wrapper {
@@ -85,6 +84,7 @@ hr {
 .hero-image img {
   background-repeat: no-repeat;
   position: relative;
+  margin: auto 0;
   background-size: cover;
   background-color: #000;
   width: 100%;
@@ -95,6 +95,10 @@ hr {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+.col-md-12 {
+  width: 100%;
+  margin: auto 0;
 }
 
 .hero-text {
@@ -124,7 +128,7 @@ hr {
 }
 
 /****** Main ******/
-div#main-gallery {
+#main-gallery {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -132,7 +136,7 @@ div#main-gallery {
 }
 
 div.row.main {
-  width: 100%;
+  width: 89%;
 }
 
 #main-gallery.row.main {
@@ -143,12 +147,12 @@ div.row.main {
 }
 /* Source: https://www.taniarascia.com/how-to-build-a-responsive-image-gallery-with-flexbox/ for
 /* flex box images */
-div.col-md-4 {
-  width: 100%;
+div.col-sm-4 {
+  width: 90%;
 }
 
 img.responsive-image {
-  width: 350px;
+  width: 310px;
   max-width: 100%;
   flex-direction: row;
 }
@@ -157,18 +161,27 @@ h3 {
   padding-top: 25px;
 }
 
-div.col-md-4 img {
+div.col-sm-4 img {
   display: inline-block;
-  width: 342px;
-  height: 280px;
+  width: 320px;
+  height: 250px;
+  justify-content: start;
+  padding-right: 0;
 }
 
-div.col-md-4 h4 {
+div.col-sm-4 h4 {
   font-size: 14px;
 }
 
-div.col-md-4 p {
+div.col-sm-4 p {
   font-size: 10px;
+}
+
+@media (min-width: 576px)
+.col-sm-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
 }
 
 /* FOOTER */
