@@ -6,11 +6,22 @@
 }
 
 body {
-  margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   font-size: 15px #2d3c49;
   background: #fff;
   text-transform: uppercase;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    width: 100%;
 }
 
 h1 {
@@ -24,77 +35,98 @@ h2 {
   font-size: 2rem;
 }
 h2, h3, h4, h5, p {
-  font-family: "Lato", sans-serif;
-  color: #2d3c49;
-  font-weight: 200;
+    font-family: "Lato", sans-serif;
+    color: #2d3c49;
+    font-weight: 200;
 }
 
 .container {
-  width: 100%;
-  max-width: 980px;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 980px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.header-row {
-  width: 100%;
-  margin-top: 35px;
+div.row.header {
+    width: 100%;
+    margin-top: 0;
+    display: inline-block;
 }
 
+div.row.header {
+   justify-content: space-between;
+}
 #header-logo {
-  width: 25%;
+    padding: 0px;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 2px;
+    width: 100px;
+    height: 96px;
+    margin-right: 1em;
+    margin-top: 12px;
 }
 
-.logo-img {
-  padding: 25px 0px 0px 0px;
-  flex-direction: row;
-  position: relative;
-  padding-bottom: 5px;
-}
-
-div.col-md-6 {
-    width: 25%;
-}
-
-h1.header-title {
+#header-logo.col-sm-6 {
   width: 100%;
   display: inline-block;
 }
+.logo-img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-right: 1em;
+}
+
+div.col-sm-6 {
+  display: inline;
+}
+div.col-md-8 {
+  display: inline;
+  margin-right: 200px;
+  /* justify-content: flex-end; */
+  /* padding-left: 31px; */
+}
+
+h1.header-title {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
 
 h5.header-caption {
-  width: 100%;
-  flex-direction: row;
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+
 }
 
 div.row {
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.header-wrapper {
-  height: 100px;
+    width: 100%;
 }
 
 hr {
-  border-top: 3px solid;
-  border-color: #7d97ad;
+    border-top: 3px solid;
+    border-color: #7d97ad;
 }
 
 .hero-image img {
-  background-repeat: no-repeat;
-  position: relative;
-  background-size: cover;
-  background-color: #000;
-  width: 100%;
-  height: 280px;
-  opacity: 0.73;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-color: #000;
+    width: 100%;
+    height: 280px;
+    opacity: 0.73;
 }
 
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+}
+.col-md-12 {
+    width: 100%;
+    display: flex;
 }
 
 .hero-text {
@@ -124,11 +156,9 @@ hr {
 }
 
 /****** Main ******/
-div#main-gallery {
-  width: 100%;
+#main-gallery {
   margin: 0;
   padding: 0;
-
 }
 
 div.row.main {
@@ -136,39 +166,43 @@ div.row.main {
 }
 
 #main-gallery.row.main {
-  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 /* Source: https://www.taniarascia.com/how-to-build-a-responsive-image-gallery-with-flexbox/ for
 /* flex box images */
-div.col-md-4 {
-  width: 100%;
-}
-
-img.responsive-image {
-  width: 350px;
-  max-width: 100%;
-  flex-direction: row;
-}
 
 h3 {
   padding-top: 25px;
 }
 
-div.col-md-4 img {
-  display: inline-block;
-  width: 342px;
-  height: 280px;
+ img.responsive-image{
+     width: 350px;
+     max-width: 100%;
+     margin: 0 auto;
+     padding-right: 2em;
 }
 
-div.col-md-4 h4 {
+div.col-sm-4 h4 {
+  font-size: 18px;
+}
+
+div.col-sm-4 p {
   font-size: 14px;
 }
 
-div.col-md-4 p {
-  font-size: 10px;
+img.responsive-img {
+    width: 350px;
+    height: 280px;
+    max-width: 100%;
+}
+@media (min-width: 350px)
+    div.col-sm-4,
+    img.responsive-img {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
 }
 
 /* FOOTER */
